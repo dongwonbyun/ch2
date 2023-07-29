@@ -16,5 +16,7 @@ class TestTest {
        System.out.println("test1");
        System.out.println("test2");
        System.out.println("test3");
+// test 4
+       System.out.println("test4");
     }
 }
