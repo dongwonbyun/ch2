@@ -13,6 +13,20 @@ class TestTest {
     @Test
     void main() {
 
-       System.out.println("test");
+        String url = "http://localhost/test";
+
+        //when
+        ResponseEntity<T> response =  restTemplate.getForEntity(url, T);
+
+
+        //then
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isGreaterThan(0L);
+
+        List<Board> list = boardRepository.findAll();
+
+        assertThat(list.get(0).getAuthor()).isEqualTo(author);
+        assertThat(list.get(0).getTitle()).isEqualTo(title);
+        assertThat(list.get(0).getContent()).isEqualTo(content);
     }
 }
