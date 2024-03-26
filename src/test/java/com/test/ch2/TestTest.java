@@ -6,7 +6,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestTest {
+class TestTest {  
     @Autowired
     private TestRestTemplate restTemplate;
 
